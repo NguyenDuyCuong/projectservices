@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Application.Features.DocumentTypes.Commands.AddEdit;
+using ProjectServices.Application.Features.DocumentTypes.Queries.GetAll;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Client.Infrastructure.Managers.Misc.DocumentType;
+using ProjectServices.Shared.Constants.Application;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
+namespace ProjectServices.Client.Pages.Misc
 {
     public partial class DocumentTypes
     {
@@ -49,7 +49,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
 
             await GetDocumentTypesAsync();
             _loaded = true;
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

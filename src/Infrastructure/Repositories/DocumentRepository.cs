@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
+using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Domain.Entities.Misc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace ProjectServices.Infrastructure.Repositories
 {
     public class DocumentRepository : IDocumentRepository
     {

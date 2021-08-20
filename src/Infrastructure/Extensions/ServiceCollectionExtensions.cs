@@ -2,18 +2,18 @@
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage.Provider;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Serialization.JsonConverters;
-using BlazorHero.CleanArchitecture.Infrastructure.Repositories;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Storage;
-using BlazorHero.CleanArchitecture.Application.Serialization.Options;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Storage.Provider;
-using BlazorHero.CleanArchitecture.Application.Serialization.Serializers;
+using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Application.Interfaces.Services.Storage;
+using ProjectServices.Application.Interfaces.Services.Storage.Provider;
+using ProjectServices.Application.Interfaces.Serialization.Serializers;
+using ProjectServices.Application.Serialization.JsonConverters;
+using ProjectServices.Infrastructure.Repositories;
+using ProjectServices.Infrastructure.Services.Storage;
+using ProjectServices.Application.Serialization.Options;
+using ProjectServices.Infrastructure.Services.Storage.Provider;
+using ProjectServices.Application.Serialization.Serializers;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Extensions
+namespace ProjectServices.Infrastructure.Extensions
 {
     public static class ServiceCollectionExtensions
     {

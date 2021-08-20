@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Responses.Identity
+﻿namespace ProjectServices.Application.Responses.Identity
 {
     public class UserResponse
     {

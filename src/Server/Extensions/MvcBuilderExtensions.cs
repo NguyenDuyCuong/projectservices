@@ -1,12 +1,12 @@
 ﻿using System.Linq;
-using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
+using ProjectServices.Application.Configurations;
+using ProjectServices.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using ProjectServices.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazorHero.CleanArchitecture.Server.Extensions
+namespace ProjectServices.Server.Extensions
 {
     internal static class MvcBuilderExtensions
     {

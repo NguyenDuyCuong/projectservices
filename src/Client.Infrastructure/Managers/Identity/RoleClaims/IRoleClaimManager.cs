@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.RoleClaims
+namespace ProjectServices.Client.Infrastructure.Managers.Identity.RoleClaims
 {
     public interface IRoleClaimManager : IManager
     {

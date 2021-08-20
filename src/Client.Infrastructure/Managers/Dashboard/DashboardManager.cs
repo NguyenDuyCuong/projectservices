@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Client.Infrastructure.Extensions;
+using ProjectServices.Shared.Wrapper;
 using System.Net.Http;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Dashboards.Queries.GetData;
+using ProjectServices.Application.Features.Dashboards.Queries.GetData;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Dashboard
+namespace ProjectServices.Client.Infrastructure.Managers.Dashboard
 {
     public class DashboardManager : IDashboardManager
     {

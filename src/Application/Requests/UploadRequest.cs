@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Enums;
+﻿using ProjectServices.Application.Enums;
 
-namespace BlazorHero.CleanArchitecture.Application.Requests
+namespace ProjectServices.Application.Requests
 {
     public class UploadRequest
     {

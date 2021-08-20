@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Requests;
+using ProjectServices.Domain.Entities.Catalog;
+using ProjectServices.Shared.Constants.Application;
+using ProjectServices.Shared.Wrapper;
 using MediatR;
 using Microsoft.Extensions.Localization;
 using System;
@@ -14,10 +14,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
 using FluentValidation;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Import
+namespace ProjectServices.Application.Features.Brands.Commands.Import
 {
     public partial class ImportBrandsCommand : IRequest<Result<int>>
     {

@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using ProjectServices.Application.Requests.Identity;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Authentication
+namespace ProjectServices.Client.Pages.Authentication
 {
     public partial class Register
     {

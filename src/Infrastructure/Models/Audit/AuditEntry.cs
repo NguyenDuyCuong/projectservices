@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Enums;
+﻿using ProjectServices.Application.Enums;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Audit
+namespace ProjectServices.Infrastructure.Models.Audit
 {
     public class AuditEntry
     {

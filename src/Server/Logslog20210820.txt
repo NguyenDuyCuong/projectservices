@@ -1,0 +1,30 @@
+2021-08-20 04:44:11.717 +00:00 [INF] Seeded Administrator Role.
+2021-08-20 04:44:12.432 +00:00 [INF] Seeded Default SuperAdmin User.
+2021-08-20 04:44:14.876 +00:00 [INF] Seeded Basic Role.
+2021-08-20 04:44:15.005 +00:00 [INF] Seeded User with Basic Role.
+2021-08-20 04:44:15.049 +00:00 [FTL] Unable to start Kestrel.
+Interop+Crypto+OpenSslCryptographicException: error:2006D080:BIO routines:BIO_new_file:no such file
+   at Interop.Crypto.CheckValidOpenSslHandle(SafeHandle handle)
+   at Internal.Cryptography.Pal.OpenSslX509CertificateReader.FromFile(String fileName, SafePasswordHandle password, X509KeyStorageFlags keyStorageFlags)
+   at System.Security.Cryptography.X509Certificates.X509Certificate..ctor(String fileName, String password, X509KeyStorageFlags keyStorageFlags)
+   at System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Certificates.CertificateConfigLoader.LoadCertificate(CertificateConfig certInfo, String endpointName)
+   at Microsoft.AspNetCore.Server.Kestrel.KestrelConfigurationLoader.LoadDefaultCert()
+   at Microsoft.AspNetCore.Server.Kestrel.KestrelConfigurationLoader.Reload()
+   at Microsoft.AspNetCore.Server.Kestrel.KestrelConfigurationLoader.Load()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-08-20 04:46:42.320 +00:00 [INF] Now listening on: https://[::]:5005
+2021-08-20 04:46:42.365 +00:00 [INF] Now listening on: http://[::]:5006
+2021-08-20 04:46:42.368 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-20 04:46:42.369 +00:00 [INF] Hosting environment: Development
+2021-08-20 04:46:42.371 +00:00 [INF] Content root path: /app
+2021-08-20 04:55:52.197 +00:00 [INF] Seeded Administrator Role.
+2021-08-20 04:55:52.544 +00:00 [INF] Seeded Default SuperAdmin User.
+2021-08-20 04:55:54.513 +00:00 [INF] Seeded Basic Role.
+2021-08-20 04:55:54.598 +00:00 [INF] Seeded User with Basic Role.
+2021-08-20 04:55:54.694 +00:00 [INF] Now listening on: https://[::]:5005
+2021-08-20 04:55:54.697 +00:00 [INF] Now listening on: http://[::]:5006
+2021-08-20 04:55:54.702 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-20 04:55:54.702 +00:00 [INF] Hosting environment: Development
+2021-08-20 04:55:54.703 +00:00 [INF] Content root path: /app

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Infrastructure.Models.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Mappings
+namespace ProjectServices.Infrastructure.Mappings
 {
     public class RoleClaimProfile : Profile
     {

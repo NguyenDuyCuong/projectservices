@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Options;
+using ProjectServices.Application.Interfaces.Serialization.Options;
 
-namespace BlazorHero.CleanArchitecture.Application.Serialization.Options
+namespace ProjectServices.Application.Serialization.Options
 {
     public class SystemTextJsonOptions : IJsonSerializerOptions
     {

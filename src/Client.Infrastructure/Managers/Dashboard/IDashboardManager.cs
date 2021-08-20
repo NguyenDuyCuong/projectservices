@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Shared.Wrapper;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Dashboards.Queries.GetData;
+using ProjectServices.Application.Features.Dashboards.Queries.GetData;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Dashboard
+namespace ProjectServices.Client.Infrastructure.Managers.Dashboard
 {
     public interface IDashboardManager : IManager
     {

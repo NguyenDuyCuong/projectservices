@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Application.Models.Chat;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -11,11 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Communication;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
+using ProjectServices.Application.Interfaces.Chat;
+using ProjectServices.Client.Infrastructure.Managers.Communication;
+using ProjectServices.Shared.Constants.Storage;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Communication
+namespace ProjectServices.Client.Pages.Communication
 {
     public partial class Chat
     {
@@ -75,12 +75,21 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Communication
 
         protected override async Task OnInitializedAsync()
         {
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();
             }
-
+            HubConnection.On<string>(ApplicationConstants.SignalR.PingResponse, (userId) =>
+            {
+                var connectedUser = UserList.Find(x => x.Id.Equals(userId));
+                if (connectedUser is { IsOnline: false })
+                {
+                    connectedUser.IsOnline = true;
+                    //_snackBar.Add($"{connectedUser.UserName} {_localizer["Logged In."]}", Severity.Info);
+                    StateHasChanged();
+                }
+            });
             HubConnection.On<string>(ApplicationConstants.SignalR.ConnectUser, (userId) =>
             {
                 var connectedUser = UserList.Find(x => x.Id.Equals(userId));
@@ -127,6 +136,8 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Communication
             {
                 await LoadUserChat(CId);
             }
+
+            await HubConnection.SendAsync(ApplicationConstants.SignalR.PingRequest, CurrentUserId);
         }
 
         public List<ChatUserResponse> UserList = new();

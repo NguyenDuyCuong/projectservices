@@ -1,13 +1,13 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
+﻿using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Models.Chat;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Application.Interfaces.Chat;
+using ProjectServices.Shared.Constants.Permission;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.Communication
+namespace ProjectServices.Server.Controllers.Communication
 {
     [Authorize(Policy = Permissions.Communication.Chat)]
     [Route("api/[controller]")]

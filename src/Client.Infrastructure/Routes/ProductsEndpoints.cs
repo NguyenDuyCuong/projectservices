@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Routes
+namespace ProjectServices.Client.Infrastructure.Routes
 {
     public static class ProductsEndpoints
     {

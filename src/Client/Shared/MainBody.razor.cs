@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Roles;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Client.Extensions;
+using ProjectServices.Client.Infrastructure.Managers.Identity.Roles;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared
+namespace ProjectServices.Client.Shared
 {
     public partial class MainBody
     {
@@ -53,7 +53,7 @@ namespace BlazorHero.CleanArchitecture.Client.Shared
 
             _rightToLeft = await _clientPreferenceManager.IsRTL();
             _interceptor.RegisterEvent();
-            hubConnection = hubConnection.TryInitialize(_navigationManager);
+            hubConnection = hubConnection.TryInitialize(_navigationManager, _localStorage);
             await hubConnection.StartAsync();
             hubConnection.On<string, string, string>(ApplicationConstants.SignalR.ReceiveChatNotification, (message, receiverUserId, senderUserId) =>
             {
@@ -115,6 +115,11 @@ namespace BlazorHero.CleanArchitecture.Client.Shared
                         }
                     }
                 }
+            });
+            hubConnection.On<string>(ApplicationConstants.SignalR.PingRequest, async (userName) =>
+            {
+                await hubConnection.SendAsync(ApplicationConstants.SignalR.PingResponse, CurrentUserId, userName);
+
             });
 
             await hubConnection.SendAsync(ApplicationConstants.SignalR.OnConnect, CurrentUserId);

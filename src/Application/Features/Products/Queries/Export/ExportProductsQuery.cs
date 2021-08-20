@@ -1,18 +1,18 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
+﻿using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Domain.Entities.Catalog;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Specifications.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Extensions;
+using ProjectServices.Application.Specifications.Catalog;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Products.Queries.Export
+namespace ProjectServices.Application.Features.Products.Queries.Export
 {
     public class ExportProductsQuery : IRequest<Result<string>>
     {

@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Requests.Mail;
+﻿using ProjectServices.Application.Configurations;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Requests.Mail;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Logging;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Shared.Services
+namespace ProjectServices.Infrastructure.Shared.Services
 {
     public class SMTPMailService : IMailService
     {

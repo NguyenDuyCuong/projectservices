@@ -1,27 +1,28 @@
-﻿using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Options;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Settings;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Serialization.JsonConverters;
-using BlazorHero.CleanArchitecture.Application.Serialization.Options;
-using BlazorHero.CleanArchitecture.Application.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Serialization.Settings;
-using BlazorHero.CleanArchitecture.Infrastructure;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Services;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Shared.Services;
-using BlazorHero.CleanArchitecture.Server.Localization;
-using BlazorHero.CleanArchitecture.Server.Managers.Preferences;
-using BlazorHero.CleanArchitecture.Server.Services;
-using BlazorHero.CleanArchitecture.Server.Settings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Localization;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Configurations;
+using ProjectServices.Application.Interfaces.Serialization.Options;
+using ProjectServices.Application.Interfaces.Serialization.Serializers;
+using ProjectServices.Application.Interfaces.Serialization.Settings;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Interfaces.Services.Account;
+using ProjectServices.Application.Interfaces.Services.Identity;
+using ProjectServices.Application.Serialization.JsonConverters;
+using ProjectServices.Application.Serialization.Options;
+using ProjectServices.Application.Serialization.Serializers;
+using ProjectServices.Application.Serialization.Settings;
+using ProjectServices.Infrastructure;
+using ProjectServices.Infrastructure.Contexts;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Infrastructure.Services;
+using ProjectServices.Infrastructure.Services.Identity;
+using ProjectServices.Infrastructure.Shared.Services;
+using ProjectServices.Server.Localization;
+using ProjectServices.Server.Managers.Preferences;
+using ProjectServices.Server.Services;
+using ProjectServices.Server.Settings;
+using ProjectServices.Shared.Constants.Application;
+using ProjectServices.Shared.Constants.Localization;
+using ProjectServices.Shared.Constants.Permission;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -44,7 +45,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Extensions
+namespace ProjectServices.Server.Extensions
 {
     internal static class ServiceCollectionExtensions
     {
@@ -117,7 +118,7 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "BlazorHero.CleanArchitecture",
+                    Title = "Project Services",
                     License = new OpenApiLicense
                     {
                         Name = "MIT License",
@@ -253,6 +254,20 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
 
                     bearer.Events = new JwtBearerEvents
                     {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+
+                            // If the request is for our hub...
+                            var path = context.HttpContext.Request.Path;
+                            if (!string.IsNullOrEmpty(accessToken) &&
+                                (path.StartsWithSegments(ApplicationConstants.SignalR.HubUrl)))
+                            {
+                                // Read the token out of the query string
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        },
                         OnAuthenticationFailed = c =>
                         {
                             if (c.Exception is SecurityTokenExpiredException)

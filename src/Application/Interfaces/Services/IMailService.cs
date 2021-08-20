@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Mail;
+﻿using ProjectServices.Application.Requests.Mail;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace ProjectServices.Application.Interfaces.Services
 {
     public interface IMailService
     {

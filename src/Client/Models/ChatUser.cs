@@ -1,6 +1,6 @@
 ﻿using MudBlazor;
 
-namespace AdminDashboard.Wasm.Models
+namespace ProjectServices.Client.Models
 {
     public class ChatUser
     {

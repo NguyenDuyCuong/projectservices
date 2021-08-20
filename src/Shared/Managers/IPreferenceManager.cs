@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Settings;
+﻿using ProjectServices.Shared.Settings;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Shared.Managers
+namespace ProjectServices.Shared.Managers
 {
     public interface IPreferenceManager
     {

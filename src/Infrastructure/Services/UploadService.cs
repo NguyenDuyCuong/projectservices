@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Requests;
+﻿using ProjectServices.Application.Extensions;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Requests;
 using System.IO;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services
+namespace ProjectServices.Infrastructure.Services
 {
     public class UploadService : IUploadService
     {

@@ -2,17 +2,17 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Interfaces.Services.Identity;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Infrastructure.Contexts;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace ProjectServices.Infrastructure.Services.Identity
 {
     public class RoleClaimService : IRoleClaimService
     {

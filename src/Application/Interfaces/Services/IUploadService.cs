@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests;
+﻿using ProjectServices.Application.Requests;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace ProjectServices.Application.Interfaces.Services
 {
     public interface IUploadService
     {

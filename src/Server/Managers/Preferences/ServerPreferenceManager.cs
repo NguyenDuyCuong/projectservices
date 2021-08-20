@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage;
-using BlazorHero.CleanArchitecture.Server.Settings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
-using BlazorHero.CleanArchitecture.Shared.Settings;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Interfaces.Services.Storage;
+using ProjectServices.Server.Settings;
+using ProjectServices.Shared.Constants.Storage;
+using ProjectServices.Shared.Settings;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Server.Managers.Preferences
+namespace ProjectServices.Server.Managers.Preferences
 {
     public class ServerPreferenceManager : IServerPreferenceManager
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetById
+namespace ProjectServices.Application.Features.Documents.Queries.GetById
 {
     public class GetDocumentByIdResponse
     {

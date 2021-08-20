@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using BlazorHero.CleanArchitecture.Application.Features.Documents.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Requests;
+using ProjectServices.Application.Features.Documents.Commands.AddEdit;
+using ProjectServices.Application.Requests;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using MudBlazor;
@@ -9,11 +9,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.Document;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType;
+using ProjectServices.Application.Features.DocumentTypes.Queries.GetAll;
+using ProjectServices.Client.Infrastructure.Managers.Misc.Document;
+using ProjectServices.Client.Infrastructure.Managers.Misc.DocumentType;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
+namespace ProjectServices.Client.Pages.Misc
 {
     public partial class AddEditDocumentModal
     {

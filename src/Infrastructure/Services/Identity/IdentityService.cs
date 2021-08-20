@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Configurations;
+using ProjectServices.Application.Interfaces.Services.Identity;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
@@ -17,7 +17,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace ProjectServices.Infrastructure.Services.Identity
 {
     public class IdentityService : ITokenService
     {

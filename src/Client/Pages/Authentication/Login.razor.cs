@@ -1,11 +1,11 @@
 ﻿using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+using ProjectServices.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Authentication
+namespace ProjectServices.Client.Pages.Authentication
 {
     public partial class Login
     {

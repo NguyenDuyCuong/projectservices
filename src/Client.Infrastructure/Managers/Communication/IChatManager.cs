@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Models.Chat;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
+using ProjectServices.Application.Interfaces.Chat;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Communication
+namespace ProjectServices.Client.Infrastructure.Managers.Communication
 {
     public interface IChatManager : IManager
     {

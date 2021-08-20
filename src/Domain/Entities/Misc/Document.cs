@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Entities.ExtendedAttributes;
+﻿using ProjectServices.Domain.Contracts;
+using ProjectServices.Domain.Entities.ExtendedAttributes;
 
-namespace BlazorHero.CleanArchitecture.Domain.Entities.Misc
+namespace ProjectServices.Domain.Entities.Misc
 {
     public class Document : AuditableEntityWithExtendedAttributes<int, int, Document, DocumentExtendedAttribute>
     {

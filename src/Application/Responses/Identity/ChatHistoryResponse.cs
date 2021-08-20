@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Application.Responses.Identity
+namespace ProjectServices.Application.Responses.Identity
 {
     public partial class ChatHistoryResponse
     {

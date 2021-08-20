@@ -1,4 +1,4 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using ProjectServices.Application.Requests.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using MudBlazor;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace ProjectServices.Client.Pages.Identity
 {
     public partial class Reset
     {

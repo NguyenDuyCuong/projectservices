@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using ProjectServices.Application.Extensions;
+using ProjectServices.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Application.Specifications.Base
+namespace ProjectServices.Application.Specifications.Base
 {
     public abstract class HeroSpecification<T> : ISpecification<T> where T : class, IEntity
     {

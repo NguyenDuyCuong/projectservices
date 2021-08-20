@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Roles;
+using ProjectServices.Client.Infrastructure.Managers.Identity.Roles;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace ProjectServices.Client.Pages.Identity
 {
     public partial class RoleModal
     {
@@ -28,7 +28,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
 
         protected override async Task OnInitializedAsync()
         {
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

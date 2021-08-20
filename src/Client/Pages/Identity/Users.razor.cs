@@ -1,16 +1,16 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+﻿using ProjectServices.Application.Responses.Identity;
 using MudBlazor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Shared.Constants.Application;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace ProjectServices.Client.Pages.Identity
 {
     public partial class Users
     {

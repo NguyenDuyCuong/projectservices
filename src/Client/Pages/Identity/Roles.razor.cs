@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Roles;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Client.Infrastructure.Managers.Identity.Roles;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace ProjectServices.Client.Pages.Identity
 {
     public partial class Roles
     {
@@ -48,7 +48,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
 
             await GetRolesAsync();
             _loaded = true;
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

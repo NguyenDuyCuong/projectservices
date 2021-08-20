@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>BlazorHero.CleanArchitecture.Shared</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Shared</AssemblyName>
+    <RootNamespace>ProjectServices.Shared</RootNamespace>
+    <AssemblyName>ProjectServices.Shared</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

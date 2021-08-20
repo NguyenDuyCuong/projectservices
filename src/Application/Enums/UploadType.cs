@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BlazorHero.CleanArchitecture.Application.Enums
+namespace ProjectServices.Application.Enums
 {
     public enum UploadType : byte
     {

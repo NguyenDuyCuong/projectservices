@@ -1,15 +1,15 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetById;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+﻿using ProjectServices.Application.Features.Brands.Queries.GetAll;
+using ProjectServices.Application.Features.Brands.Queries.GetById;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Delete;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Import;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Application.Features.Brands.Commands.Delete;
+using ProjectServices.Application.Features.Brands.Queries.Export;
+using ProjectServices.Application.Features.Brands.Commands.Import;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.v1.Catalog
+namespace ProjectServices.Server.Controllers.v1.Catalog
 {
     public class BrandsController : BaseApiController<BrandsController>
     {

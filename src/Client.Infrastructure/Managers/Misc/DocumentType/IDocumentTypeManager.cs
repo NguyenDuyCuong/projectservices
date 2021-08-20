@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Features.DocumentTypes.Commands.AddEdit;
+using ProjectServices.Application.Features.DocumentTypes.Queries.GetAll;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType
+namespace ProjectServices.Client.Infrastructure.Managers.Misc.DocumentType
 {
     public interface IDocumentTypeManager : IManager
     {

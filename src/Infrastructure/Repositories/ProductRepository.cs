@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
+﻿using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Domain.Entities.Catalog;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace ProjectServices.Infrastructure.Repositories
 {
     public class ProductRepository : IProductRepository
     {

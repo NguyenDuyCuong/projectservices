@@ -1,4 +1,4 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Audit;
+﻿using ProjectServices.Application.Responses.Audit;
 using Microsoft.JSInterop;
 using MudBlazor;
 using System;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Audit;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Client.Infrastructure.Managers.Audit;
+using ProjectServices.Shared.Constants.Application;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Utilities
+namespace ProjectServices.Client.Pages.Utilities
 {
     public partial class AuditTrails
     {

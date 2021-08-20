@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace BlazorHero.CleanArchitecture.Client.Extensions
+namespace ProjectServices.Client.Extensions
 {
     internal static class ClaimsPrincipalExtensions
     {

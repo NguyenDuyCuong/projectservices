@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Client.Extensions;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Client.Infrastructure.Managers.Catalog.Brand;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
+namespace ProjectServices.Client.Pages.Catalog
 {
     public partial class AddEditBrandModal
     {
@@ -47,7 +47,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
         protected override async Task OnInitializedAsync()
         {
             await LoadDataAsync();
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

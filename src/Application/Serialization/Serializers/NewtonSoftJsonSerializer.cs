@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Serialization.Settings;
+﻿using ProjectServices.Application.Interfaces.Serialization.Serializers;
+using ProjectServices.Application.Serialization.Settings;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace BlazorHero.CleanArchitecture.Application.Serialization.Serializers
+namespace ProjectServices.Application.Serialization.Serializers
 {
     public class NewtonSoftJsonSerializer : IJsonSerializer
     {

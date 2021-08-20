@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Interfaces.Common;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity
+namespace ProjectServices.Application.Interfaces.Services.Identity
 {
     public interface IRoleService : IService
     {

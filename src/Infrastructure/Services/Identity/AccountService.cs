@@ -1,15 +1,15 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Interfaces.Services.Account;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace ProjectServices.Infrastructure.Services.Identity
 {
     public class AccountService : IAccountService
     {

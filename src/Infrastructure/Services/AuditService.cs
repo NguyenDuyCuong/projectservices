@@ -1,20 +1,20 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Audit;
-using BlazorHero.CleanArchitecture.Application.Responses.Audit;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Infrastructure.Models.Audit;
+using ProjectServices.Application.Responses.Audit;
+using ProjectServices.Infrastructure.Contexts;
+using ProjectServices.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Infrastructure.Specifications;
+using ProjectServices.Application.Extensions;
+using ProjectServices.Infrastructure.Specifications;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services
+namespace ProjectServices.Infrastructure.Services
 {
     public class AuditService : IAuditService
     {

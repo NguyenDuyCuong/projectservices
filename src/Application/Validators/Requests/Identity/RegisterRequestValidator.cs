@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using ProjectServices.Application.Requests.Identity;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Validators.Requests.Identity
+namespace ProjectServices.Application.Validators.Requests.Identity
 {
     public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
     {

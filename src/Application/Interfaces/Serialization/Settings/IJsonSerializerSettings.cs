@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Settings
+namespace ProjectServices.Application.Interfaces.Serialization.Settings
 {
     public interface IJsonSerializerSettings
     {

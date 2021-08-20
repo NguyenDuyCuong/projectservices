@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.Export;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.GetAll;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using ProjectServices.Domain.Contracts;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.ExtendedAttribute
+namespace ProjectServices.Client.Infrastructure.Managers.ExtendedAttribute
 {
     public interface IExtendedAttributeManager<TId, TEntityId, TEntity, TExtendedAttribute>
         where TEntity : AuditableEntity<TEntityId>, IEntityWithExtendedAttributes<TExtendedAttribute>, IEntity<TEntityId>

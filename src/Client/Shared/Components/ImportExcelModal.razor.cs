@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using Blazored.FluentValidation;
 using Microsoft.AspNetCore.Components.Forms;
 using System.IO;
-using BlazorHero.CleanArchitecture.Application.Requests;
+using ProjectServices.Application.Requests;
 using System;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared.Components
+namespace ProjectServices.Client.Shared.Components
 {
     public partial class ImportExcelModal
     {

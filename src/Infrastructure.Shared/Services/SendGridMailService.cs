@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Infrastructure.Shared.Services
+﻿namespace ProjectServices.Infrastructure.Shared.Services
 {
     internal class SendGridMailService
     {

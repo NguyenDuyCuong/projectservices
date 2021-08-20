@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BlazorHero.CleanArchitecture.Application.Responses.Identity
+namespace ProjectServices.Application.Responses.Identity
 {
     public class PermissionResponse
     {

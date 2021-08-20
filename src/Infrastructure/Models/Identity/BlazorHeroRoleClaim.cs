@@ -1,8 +1,8 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using ProjectServices.Domain.Contracts;
 using Microsoft.AspNetCore.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Identity
+namespace ProjectServices.Infrastructure.Models.Identity
 {
     public class BlazorHeroRoleClaim : IdentityRoleClaim<string>, IAuditableEntity<int>
     {

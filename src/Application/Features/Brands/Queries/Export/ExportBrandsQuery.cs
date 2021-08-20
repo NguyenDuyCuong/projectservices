@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Specifications.Catalog;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Extensions;
+using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Specifications.Catalog;
+using ProjectServices.Domain.Entities.Catalog;
+using ProjectServices.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.Export
+namespace ProjectServices.Application.Features.Brands.Queries.Export
 {
     public class ExportBrandsQuery : IRequest<Result<string>>
     {

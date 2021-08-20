@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+﻿using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Helpers
+namespace ProjectServices.Infrastructure.Helpers
 {
     public static class ClaimsHelper
     {

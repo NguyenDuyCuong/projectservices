@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
+﻿using ProjectServices.Application.Interfaces.Common;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace ProjectServices.Application.Interfaces.Services
 {
     public interface ICurrentUserService : IService
     {

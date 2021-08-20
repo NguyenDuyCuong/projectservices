@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+﻿using ProjectServices.Application.Responses.Identity;
 using System.Collections.Generic;
 
-namespace BlazorHero.CleanArchitecture.Application.Requests.Identity
+namespace ProjectServices.Application.Requests.Identity
 {
     public class UpdateUserRolesRequest
     {

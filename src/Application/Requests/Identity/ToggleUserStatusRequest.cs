@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Requests.Identity
+﻿namespace ProjectServices.Application.Requests.Identity
 {
     public class ToggleUserStatusRequest
     {

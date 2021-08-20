@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetById;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Application.Features.Brands.Queries.GetAll;
+using ProjectServices.Application.Features.Brands.Queries.GetById;
+using ProjectServices.Domain.Entities.Catalog;
 
-namespace BlazorHero.CleanArchitecture.Application.Mappings
+namespace ProjectServices.Application.Mappings
 {
     public class BrandProfile : Profile
     {

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.ExtendedAttribute;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Enums;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using ProjectServices.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.Export;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Client.Infrastructure.Managers.ExtendedAttribute;
+using ProjectServices.Domain.Contracts;
+using ProjectServices.Domain.Enums;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared.Components
+namespace ProjectServices.Client.Shared.Components
 {
     public class ExtendedAttributesLocalization
     {
@@ -96,7 +96,7 @@ namespace BlazorHero.CleanArchitecture.Client.Shared.Components
                 CurrentUserId = user.GetUserId();
             }
 
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

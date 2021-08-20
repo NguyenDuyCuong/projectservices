@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Shared.Wrapper;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions
+namespace ProjectServices.Client.Infrastructure.Extensions
 {
     internal static class ResultExtensions
     {

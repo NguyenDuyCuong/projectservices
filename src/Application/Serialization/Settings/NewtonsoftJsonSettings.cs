@@ -1,8 +1,8 @@
 ﻿
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Settings;
+using ProjectServices.Application.Interfaces.Serialization.Settings;
 using Newtonsoft.Json;
 
-namespace BlazorHero.CleanArchitecture.Application.Serialization.Settings
+namespace ProjectServices.Application.Serialization.Settings
 {
     public class NewtonsoftJsonSettings : IJsonSerializerSettings
     {

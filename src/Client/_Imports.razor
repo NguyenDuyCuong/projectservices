@@ -15,36 +15,36 @@
 @using Blazored.FluentValidation
 
 @*Client Services*@
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Account
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Authentication
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Roles
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.RoleClaims
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Users
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preferences
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Interceptors
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Product
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Dashboard
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Communication
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Audit
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.Document
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType
+@using ProjectServices.Client.Infrastructure.Managers.Identity.Account
+@using ProjectServices.Client.Infrastructure.Managers.Identity.Authentication
+@using ProjectServices.Client.Infrastructure.Managers.Identity.Roles
+@using ProjectServices.Client.Infrastructure.Managers.Identity.RoleClaims
+@using ProjectServices.Client.Infrastructure.Managers.Identity.Users
+@using ProjectServices.Client.Infrastructure.Managers.Preferences
+@using ProjectServices.Client.Infrastructure.Managers.Interceptors
+@using ProjectServices.Client.Infrastructure.Managers.Catalog.Product
+@using ProjectServices.Client.Infrastructure.Managers.Catalog.Brand
+@using ProjectServices.Client.Infrastructure.Managers.Dashboard
+@using ProjectServices.Client.Infrastructure.Managers.Communication
+@using ProjectServices.Client.Infrastructure.Managers.Audit
+@using ProjectServices.Client.Infrastructure.Managers.Misc.Document
+@using ProjectServices.Client.Infrastructure.Managers.Misc.DocumentType
 
 @*Shared Libraries*@
-@using BlazorHero.CleanArchitecture.Shared.Constants.Permission
-@using BlazorHero.CleanArchitecture.Client.Shared.Components
+@using ProjectServices.Shared.Constants.Permission
+@using ProjectServices.Client.Shared.Components
 
-@using BlazorHero.CleanArchitecture.Client
-@using BlazorHero.CleanArchitecture.Client.Shared
-@using BlazorHero.CleanArchitecture.Client.Shared.Dialogs
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Settings
+@using ProjectServices.Client
+@using ProjectServices.Client.Shared
+@using ProjectServices.Client.Shared.Dialogs
+@using ProjectServices.Client.Infrastructure.Settings
 
-@using BlazorHero.CleanArchitecture.Application.Requests.Identity
+@using ProjectServices.Application.Requests.Identity
 
-@using BlazorHero.CleanArchitecture.Client.Pages.Authentication
+@using ProjectServices.Client.Pages.Authentication
 
-@using BlazorHero.CleanArchitecture.Client.Infrastructure.Authentication
-@using BlazorHero.CleanArchitecture.Client.Extensions
+@using ProjectServices.Client.Infrastructure.Authentication
+@using ProjectServices.Client.Extensions
 
 @attribute [Authorize]
 @inject IAuthenticationManager _authenticationManager

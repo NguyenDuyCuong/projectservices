@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>BlazorHero.CleanArchitecture.Server</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Server</AssemblyName>
+    <RootNamespace>ProjectServices.Server</RootNamespace>
+    <AssemblyName>ProjectServices.Server</AssemblyName>
   </PropertyGroup>
   <PropertyGroup>
-    <DocumentationFile>BlazorHero.CleanArchitecture.Server.xml</DocumentationFile>
+    <DocumentationFile>ProjectServices.Server.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
     <UserSecretsId>aa8b7360-671b-4ab2-99b0-7df28629ef3d</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>

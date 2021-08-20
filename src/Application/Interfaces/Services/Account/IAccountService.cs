@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Interfaces.Common;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Shared.Wrapper;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account
+namespace ProjectServices.Application.Interfaces.Services.Account
 {
     public interface IAccountService : IService
     {

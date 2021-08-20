@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage.Provider;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Interfaces.Services.Storage.Provider;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Storage.Provider
+namespace ProjectServices.Infrastructure.Services.Storage.Provider
 {
     internal class ServerStorageProvider : IStorageProvider
     {

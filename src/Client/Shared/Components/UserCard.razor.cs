@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Client.Extensions;
+﻿using ProjectServices.Client.Extensions;
 using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared.Components
+namespace ProjectServices.Client.Shared.Components
 {
     public partial class UserCard
     {

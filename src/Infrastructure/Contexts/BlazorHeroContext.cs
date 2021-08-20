@@ -1,17 +1,17 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
+﻿using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Models.Chat;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Domain.Contracts;
+using ProjectServices.Domain.Entities.Catalog;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Domain.Entities.ExtendedAttributes;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
+using ProjectServices.Domain.Entities.ExtendedAttributes;
+using ProjectServices.Domain.Entities.Misc;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
+namespace ProjectServices.Infrastructure.Contexts
 {
     public class BlazorHeroContext : AuditableContext
     {

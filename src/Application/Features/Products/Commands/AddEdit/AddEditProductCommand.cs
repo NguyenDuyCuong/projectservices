@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Interfaces.Repositories;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Requests;
+using ProjectServices.Domain.Entities.Catalog;
+using ProjectServices.Shared.Wrapper;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Localization;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Products.Commands.AddEdit
+namespace ProjectServices.Application.Features.Products.Commands.AddEdit
 {
     public partial class AddEditProductCommand : IRequest<Result<int>>
     {

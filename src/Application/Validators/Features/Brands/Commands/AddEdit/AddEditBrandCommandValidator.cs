@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
+﻿using ProjectServices.Application.Features.Brands.Commands.AddEdit;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Validators.Features.Brands.Commands.AddEdit
+namespace ProjectServices.Application.Validators.Features.Brands.Commands.AddEdit
 {
     public class AddEditBrandCommandValidator : AbstractValidator<AddEditBrandCommand>
     {

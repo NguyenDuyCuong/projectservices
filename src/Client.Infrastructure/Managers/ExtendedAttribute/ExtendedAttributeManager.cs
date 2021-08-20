@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.Export;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.GetAll;
+using ProjectServices.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using ProjectServices.Client.Infrastructure.Extensions;
+using ProjectServices.Domain.Contracts;
+using ProjectServices.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.ExtendedAttribute
+namespace ProjectServices.Client.Infrastructure.Managers.ExtendedAttribute
 {
     public class ExtendedAttributeManager<TId, TEntityId, TEntity, TExtendedAttribute>
         : IExtendedAttributeManager<TId, TEntityId, TEntity, TExtendedAttribute>

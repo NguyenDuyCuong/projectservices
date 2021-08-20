@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using ProjectServices.Application.Features.Brands.Queries.GetAll;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
@@ -9,17 +9,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Client.Infrastructure.Managers.Catalog.Brand;
+using ProjectServices.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Import;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Client.Shared.Components;
+using ProjectServices.Application.Features.Brands.Commands.Import;
+using ProjectServices.Shared.Wrapper;
+using ProjectServices.Application.Requests;
+using ProjectServices.Client.Shared.Components;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
+namespace ProjectServices.Client.Pages.Catalog
 {
     public partial class Brands
     {
@@ -56,7 +56,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
             await GetBrandsAsync();
             _loaded = true;
 
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

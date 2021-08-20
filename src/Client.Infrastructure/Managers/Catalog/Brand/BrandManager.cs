@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using ProjectServices.Application.Features.Brands.Queries.GetAll;
+using ProjectServices.Client.Infrastructure.Extensions;
+using ProjectServices.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Import;
+using ProjectServices.Application.Features.Brands.Commands.AddEdit;
+using ProjectServices.Application.Features.Brands.Commands.Import;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand
+namespace ProjectServices.Client.Infrastructure.Managers.Catalog.Brand
 {
     public class BrandManager : IBrandManager
     {

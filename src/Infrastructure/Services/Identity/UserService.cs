@@ -6,24 +6,24 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Exceptions;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Mail;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Specifications;
-using BlazorHero.CleanArchitecture.Shared.Constants.Role;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using ProjectServices.Application.Exceptions;
+using ProjectServices.Application.Extensions;
+using ProjectServices.Application.Interfaces.Services;
+using ProjectServices.Application.Interfaces.Services.Identity;
+using ProjectServices.Application.Requests.Identity;
+using ProjectServices.Application.Requests.Mail;
+using ProjectServices.Application.Responses.Identity;
+using ProjectServices.Infrastructure.Models.Identity;
+using ProjectServices.Infrastructure.Specifications;
+using ProjectServices.Shared.Constants.Role;
+using ProjectServices.Shared.Wrapper;
 using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace ProjectServices.Infrastructure.Services.Identity
 {
     public class UserService : IUserService
     {

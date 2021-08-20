@@ -1,14 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using ProjectServices.Application.Features.DocumentTypes.Commands.AddEdit;
+using ProjectServices.Client.Extensions;
+using ProjectServices.Client.Infrastructure.Managers.Misc.DocumentType;
+using ProjectServices.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
+namespace ProjectServices.Client.Pages.Misc
 {
     public partial class AddEditDocumentTypeModal
     {
@@ -47,7 +47,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
         protected override async Task OnInitializedAsync()
         {
             await LoadDataAsync();
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

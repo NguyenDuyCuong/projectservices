@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Shared.Constants.Application
+﻿namespace ProjectServices.Shared.Constants.Application
 {
     public static class ApplicationConstants
     {
@@ -20,6 +20,10 @@
             public const string DisconnectUser = "DisconnectUser";
             public const string OnChangeRolePermissions = "OnChangeRolePermissions";
             public const string LogoutUsersByRole = "LogoutUsersByRole";
+
+            public const string PingRequest = "PingRequestAsync";
+            public const string PingResponse = "PingResponseAsync";
+
         }
         public static class Cache
         {
