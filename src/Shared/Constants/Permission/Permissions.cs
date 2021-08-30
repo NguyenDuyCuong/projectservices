@@ -32,6 +32,18 @@ namespace ProjectServices.Shared.Constants.Permission
             public const string Import = "Permissions.Brands.Import";
         }
 
+        [DisplayName("Gitlab")]
+        [Description("Gitlab Permissions")]
+        public static class Gitlab
+        {
+            public const string View = "Permissions.Gitlab.View";
+            public const string Create = "Permissions.Gitlab.Create";
+            public const string Edit = "Permissions.Gitlab.Edit";
+            public const string Delete = "Permissions.Gitlab.Delete";
+            public const string Export = "Permissions.Gitlab.Export";
+            public const string Search = "Permissions.Gitlab.Search";
+        }
+
         [DisplayName("Documents")]
         [Description("Documents Permissions")]
         public static class Documents

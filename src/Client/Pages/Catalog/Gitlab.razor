@@ -1,0 +1,21 @@
+﻿@page "/catalog/gitlab"
+@attribute [Authorize(Policy = Permissions.Gitlab.View)]
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Products> _localizer
+
+
+<style>
+    .mud-table-container {
+        overflow: auto;
+    }
+</style>
+
+<HeroTitle Title="@_localizer["Gitlab"]" Description="@_localizer["Manage Gitlab Branches."]" />
+
+@if (!_loaded)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+}
+else
+{
+    
+}

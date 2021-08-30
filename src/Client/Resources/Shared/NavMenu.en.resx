@@ -156,6 +156,9 @@
   <data name="Features" xml:space="preserve">
     <value>Features</value>
   </data>
+  <data name="Gitlab" xml:space="preserve">
+    <value>Git-lab</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>

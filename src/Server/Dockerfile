@@ -30,3 +30,4 @@ COPY --from=publish /app/publish .
 WORKDIR /app/Files
 WORKDIR /app
 ENTRYPOINT ["dotnet", "ProjectServices.Server.dll"]
+RUN sed -i "s|TLSv1.2|TLSv1.0|g" /etc/ssl/openssl.cnf
